@@ -46,6 +46,23 @@ public class Calculate {
 	}
 	//return the quadratic equation(ax^2+bx+c) from a binomial multiplication (ax+b)(cx+d)
 	public static String foil(int num1, int num2, int num3, int num4) {
-		return (num1*int3+"n^2"+" " + num2  )
+		return (num1*num3+"n^2 + " + (num1*num4+num2*num3) +"n + "+num2*num4);
+	}
+	//return a boolean to determine if one integer is evenly divisible by another
+	public static boolean isDivisibleBy(int num1, int num2) {
+		if(num1 % num2 == 0) {
+			return true;
+		} else {
+			return false;
+		}
+		
+	}
+	//return the double the absolute value of the accepted double.
+	public static double absValue(double num1) {
+		if (num1 >= 0) {
+			return num1;
+		} else {
+			return (num1/-1.00);
+		}
 	}
 }

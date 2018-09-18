@@ -94,13 +94,17 @@ public class Calculate {
 	//returns a double from a double rounded correctly to 2 decimal places
 	public static double round2(double num) {
 		double step1;
+		int step2;
 		if (num>=0) {
-			step1 = (num*100)+.5;
+			step1 = (num*100)+0.5;
 		} else {
-			step1=(num*100)-.5;
+			step1=(num*100)-0.5;
 		}
-		int step2=(int)step1;
-		double answer1= step2/100.0;
-		return answer1;
+		step2=(int)step1;
+		return step2/100.0;
+	}
+	//Raises a value to a positive integer power. Accepts a double and integer and returns a double.
+	public static double exponenet(double num1, int num2) {
+		for (int inticial=1, num1*num2 )
 	}
 }

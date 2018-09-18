@@ -62,7 +62,45 @@ public class Calculate {
 		if (num1 >= 0) {
 			return num1;
 		} else {
-			return (num1/-1.00);
+			return (num1*-1.00);
 		}
+	}
+	//returns the double of the larger of the values passes
+	public static double max(double num1, double num2) {
+		if (num1>=num2) {
+			return num1;
+		} else {
+			return (num2);
+		}
+	}
+	//Overload the max method. THis accepts three doubles and returns a double
+	public static double max(double num1, double num2, double num3) {
+		if (num1>=num2 && num1>= num3) {
+			return num1;
+		} else if (num2>=num1 && num2>=num3) {
+			return num2;
+		} else {
+			return num3;
+		}
+	}
+	//return the small of the values passed. This method accepts two integers and returns an int.
+	public static int min(int num1,int num2) {
+		if (num1<=num2) {
+			return num1;
+		} else {
+			return (num2);
+		}
+	}
+	//returns a double from a double rounded correctly to 2 decimal places
+	public static double round2(double num) {
+		double step1;
+		if (num>=0) {
+			step1 = (num*100)+.5;
+		} else {
+			step1=(num*100)-.5;
+		}
+		int step2=(int)step1;
+		double answer1= step2/100.0;
+		return answer1;
 	}
 }

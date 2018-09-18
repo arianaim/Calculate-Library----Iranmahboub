@@ -15,5 +15,10 @@ public class DoMath {
 		System.out.println(Calculate.toMixedNum(7,2));
 		System.out.println(Calculate.foil(2, 3, 6, -7));
 		System.out.println(Calculate.isDivisibleBy(6, 3));
+		System.out.println(Calculate.absValue(-1.02));
+		System.out.println(Calculate.max(4.08,3.99));
+		System.out.println(Calculate.max(2.011,8.98,6.49));
+		System.out.println(Calculate.min(3,-8));
+		System.out.println(Calculate.round2(4.5733));
 	}
 }

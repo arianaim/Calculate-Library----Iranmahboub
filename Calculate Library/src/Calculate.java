@@ -134,8 +134,8 @@ public class Calculate {
 			} else {
 			answer = true;
 			}
+		return boolean answer;
 		}
-		return answer;
 	}
 	//return the greatest common factor of the two integers
 	public static int gcf(int num1, int num2) {

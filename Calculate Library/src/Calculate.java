@@ -127,7 +127,7 @@ public class Calculate {
 	}
 	//determines whether integer is a prime. Accepts an integer and returns a boolean
 	public static boolean isPrime(int num) {
-		boolean answer=true;
+		boolean answer;
 		for (int i=2; i<num; i++) {
 			if (isDivisibleBy(num, i)==true) {
 			answer= false;
@@ -153,10 +153,8 @@ public class Calculate {
 		double step1= num/2;
 		double step2;
 		double step3 = 0;
-		if( step1 +num /step1 != 0) {
-			step2=(step1 + num/ step1);
-			step3=step2/2;
-		}
+		step2=(step1 + num/ step1);
+		step3=step2/2;
 		return (round2(step3));
 	}
 }

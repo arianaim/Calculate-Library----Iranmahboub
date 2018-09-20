@@ -104,7 +104,60 @@ public class Calculate {
 		return step2/100.0;
 	}
 	//Raises a value to a positive integer power. Accepts a double and integer and returns a double.
-	public static double exponenet(double num1, int num2) {
-		for (int inticial=1, num1*num2 )
+	public static double exponent(double base, int exp) {
+		double raisesValue= 1;
+		if (exp>0) {
+			for (int i=1; i<=exp; i++) {
+			raisesValue = raisesValue * base;
+			}
+			return raisesValue;
+		} else {
+			return 1.0;
+		}
+	}
+	//returns the factorial of the value passed. Accepts an integer and returns a double.
+	public static double factorial(int num) {
+		int tobefactorial= 1;
+		int add=0;
+		for (int i=1; i<num; i++) {
+			add=i+1;
+			tobefactorial=tobefactorial*add; 
+		}
+		return tobefactorial;
+	}
+	//determines whether integer is a prime. Accepts an integer and returns a boolean
+	public static boolean isPrime(int num) {
+		boolean answer=true;
+		for (int i=2; i<num; i++) {
+			if (isDivisibleBy(num, i)==true) {
+			answer= false;
+			} else {
+			answer = true;
+			}
+		}
+		return answer;
+	}
+	//return the greatest common factor of the two integers
+	public static int gcf(int num1, int num2) {
+		while (num1!=0 && num2!=0) {
+			if (num1>=num2) {
+				num1=num1-num2;
+			} else {
+				num2=num2-num1;
+			}
+		}
+		return (int) absValue(num1+num2); 
+	}
+	//returns approximation of the square root of the value passed, rounded to two decimal points. Accepts double and returns a double.
+	public static double sqrt(double num) {
+		double step1= num/2;
+		double step2;
+		double step3 = 0;
+		if( step1 +num /step1 != 0) {
+			step2=(step1 + num/ step1);
+			step3=step2/2;
+		}
+		return (round2(step3));
 	}
 }
+

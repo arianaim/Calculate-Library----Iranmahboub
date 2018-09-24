@@ -127,7 +127,7 @@ public class Calculate {
 	}
 	//determines whether integer is a prime. Accepts an integer and returns a boolean
 	public static boolean isPrime(int num) {
-		boolean answer=true;
+		boolean answer = false;
 		for (int i=2; i<num; i++) {
 			if (isDivisibleBy(num, i)==true) {
 			answer= false;
@@ -150,14 +150,17 @@ public class Calculate {
 	}
 	//returns approximation of the square root of the value passed, rounded to two decimal points. Accepts double and returns a double.
 	public static double sqrt(double num) {
-		double step1= num/2;
+		double j=2.0;
+		double step1;
 		double step2;
-		double step3 = 0;
-		if( step1 +num /step1 != 0) {
-			step2=(step1 + num/ step1);
+		double step3=0;
+		for (int i=1 ; i<=5; i++) {
+			step1=num/j;
+			step2=step1+j;
 			step3=step2/2;
+			j=step3;
 		}
-		return (round2(step3));
+	return (round2(step3));
 	}
 }
 

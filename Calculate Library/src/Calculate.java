@@ -163,4 +163,3 @@ public class Calculate {
 	return (round2(step3));
 	}
 }
-

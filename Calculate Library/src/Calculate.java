@@ -162,5 +162,6 @@ public class Calculate {
 		}
 	return (round2(step3));
 	}
+	public static
 }
 

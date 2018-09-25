@@ -21,12 +21,12 @@ public class Calculate {
 		double sum = num1+num2+num3;
 		return sum/3;
 	}
-	//return the angle measure given in radians into degress
+	//return the angle measure given in radiant into degrees
 	public static double toDegree(double num1) {
 		double sum = 3.4159*num1;
 		return sum/180;
 	}
-	//return the radians given in degrees degrees into radians
+	//return the radians given in degrees degrees into radiant
 	public static double toRadians(double num1) {
 		double sum = num1*180;
 		return sum/3.4159;
@@ -42,7 +42,7 @@ public class Calculate {
 	}
 	//return the mixed number from an improper fraction
 	public static String toMixedNum(int num1, int num2) {
-		return (num1/num2+" "+ num1%num2+"/"+num2);
+		return (num1/num2+"_"+ num1%num2+"/"+num2);
 	}
 	//return the quadratic equation(ax^2+bx+c) from a binomial multiplication (ax+b)(cx+d)
 	public static String foil(int num1, int num2, int num3, int num4) {
@@ -58,11 +58,11 @@ public class Calculate {
 		
 	}
 	//return the double the absolute value of the accepted double.
-	public static double absValue(double num1) {
-		if (num1 >= 0) {
-			return num1;
+	public static double absValue(double num) {
+		if (num >= 0) {
+			return num;
 		} else {
-			return (num1*-1.00);
+			return (num*-1.00);
 		}
 	}
 	//returns the double of the larger of the values passes
@@ -117,13 +117,13 @@ public class Calculate {
 	}
 	//returns the factorial of the value passed. Accepts an integer and returns a double.
 	public static double factorial(int num) {
-		int tobefactorial= 1;
+		int increasingNum= 1;
 		int add=0;
 		for (int i=1; i<num; i++) {
 			add=i+1;
-			tobefactorial=tobefactorial*add; 
+			increasingNum=increasingNum*add; 
 		}
-		return tobefactorial;
+		return increasingNum;
 	}
 	//determines whether integer is a prime. Accepts an integer and returns a boolean
 	public static boolean isPrime(int num) {

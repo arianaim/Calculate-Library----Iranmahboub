@@ -159,7 +159,7 @@ public class Calculate {
 			step2=step1+j;
 			step3=step2/2;
 			j=step3;
-		} 
+		}
 	return (round2(step3));
 	}
 }
